@@ -10,14 +10,15 @@ let btn = document.querySelector('#btn');
 let divContent = document.querySelector('#formDiv')
 
 btn.onclick = function() {
-    let pessoas = (parseFloat(adulto.value) + parseFloat((crianca.value / 2))).toFixed(2);
-    let horas = (parseFloat(duracao.value)).toFixed(2);  
+    let pessoas = parseFloat(adulto.value) + parseFloat((crianca.value / 2));
+    let horas = parseFloat(duracao.value);  
 
     console.log(pessoas);
     console.log(horas);
     
     limparDados();
     calcCarne(horas, pessoas);
+    calcCerveja(horas);
 }
 
 function limparDados(){
@@ -34,13 +35,13 @@ function limparDados(){
 
 function calcCarne(hr, pessoas){
     if(hr <= 6){
-        let total = pessoas * 0.40;
+        let total = (pessoas * 0.40).toFixed(2);
         let pContent = document.createTextNode(`${total}kg de carne`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }else{
-        let total = pessoas * 0.65;
+        let total = (pessoas * 0.65).toFixed(2);
         let pContent = document.createTextNode(`${total}kg de carne`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
