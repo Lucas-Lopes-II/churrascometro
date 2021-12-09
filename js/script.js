@@ -13,9 +13,6 @@ btn.onclick = function() {
     let pessoas = parseFloat(adulto.value) + parseFloat((crianca.value / 2));
     let horas = parseFloat(duracao.value);  
 
-    console.log(pessoas);
-    console.log(horas);
-    
     limparDados();
     calcCarne(horas, pessoas);
     calcCerveja(horas);
