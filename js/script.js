@@ -7,9 +7,22 @@ let adulto = document.querySelector('#adulto');
 let crianca = document.querySelector('#crianca');
 let duracao = document.querySelector('#duracao');
 let btn = document.querySelector('#btn');
+let divContent = document.querySelector('#formDiv')
 
 btn.onclick = function() {
     let pessoas = (parseFloat(aultos.value) + parseFloat((crianca.value / 2))).toFixed(2);
     let horas = (parseFloat(duracao.value)).toFixed(2);  
     
+}
+
+function limparDAdos(){
+    let pTags = document.querySelectorAll('p');
+
+    if(pTags.length = 0){
+        return
+    }else{
+        for(i =0; i < pTags.length; i++){
+            divContent.removeChild(pTags[i]);
+        }    
+    }
 }
