@@ -53,13 +53,13 @@ function calcCarne(hr, pessoas){
 function calcCerveja(hr){
     if(hr <= 6){
         let total = 1.2 * (parseFloat(adulto.value)).toFixed(2);
-        let pContent = document.createTextNode(`${total} litros de cerveja`);
+        let pContent = document.createTextNode(`${total} litro(s) de cerveja`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }else{
         let total = 2 * (parseFloat(adulto.value)).toFixed(2);
-        let pContent = document.createTextNode(`${total} litros de cerveja`);
+        let pContent = document.createTextNode(`${total} litro(s) de cerveja`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
