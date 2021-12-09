@@ -10,12 +10,13 @@ let btn = document.querySelector('#btn');
 let divContent = document.querySelector('#formDiv')
 
 btn.onclick = function() {
-    let pessoas = (parseFloat(aultos.value) + parseFloat((crianca.value / 2))).toFixed(2);
+    let pessoas = (parseFloat(adulto.value) + parseFloat((crianca.value / 2))).toFixed(2);
     let horas = (parseFloat(duracao.value)).toFixed(2);  
     
+    limparDados();
 }
 
-function limparDAdos(){
+function limparDados(){
     let pTags = document.querySelectorAll('p');
 
     if(pTags.length = 0){
