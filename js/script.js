@@ -10,17 +10,20 @@ let btn = document.querySelector('#btn');
 let divContent = document.querySelector('#formDiv')
 
 btn.onclick = function() {
-    let pessoas = (parseFloat(adulto.value) + parseFloat((crianca.value / 2)).toFixed(2));
+    let pessoas = (parseFloat(adulto.value) + parseFloat((crianca.value / 2))).toFixed(2);
     let horas = (parseFloat(duracao.value)).toFixed(2);  
+
+    console.log(pessoas);
+    console.log(horas);
     
-    // limparDados();
+    limparDados();
     calcCarne(horas, pessoas);
 }
 
 function limparDados(){
     let pTags = document.querySelectorAll('p');
 
-    if(pTags.length <= 0){
+    if(pTags.length = 0){
         return
     }else{
         for(i = 0; i < pTags.length; i++){
@@ -44,3 +47,20 @@ function calcCarne(hr, pessoas){
         divContent.appendChild(pElement);
     }
 }
+
+function calcCerveja(hr){
+    if(hr <= 6){
+        let total = 1.2 * (parseFloat(adulto.value)).toFixed(2);
+        let pContent = document.createTextNode(`${total} litros de cerveja`);
+        let pElement = document.createElement('p');
+        pElement.appendChild(pContent);
+        divContent.appendChild(pElement);
+    }else{
+        let total = 2 * (parseFloat(adulto.value)).toFixed(2);
+        let pContent = document.createTextNode(`${total} litros de cerveja`);
+        let pElement = document.createElement('p');
+        pElement.appendChild(pContent);
+        divContent.appendChild(pElement);
+    }
+}
+
