@@ -19,6 +19,7 @@ btn.onclick = function() {
     limparDados();
     calcCarne(horas, pessoas);
     calcCerveja(horas);
+    calcRefri(horas, pessoas);
 }
 
 function limparDados(){
