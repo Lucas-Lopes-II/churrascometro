@@ -14,32 +14,33 @@ btn.onclick = function() {
     let horas = (parseFloat(duracao.value)).toFixed(2);  
     
     limparDados();
+    calcCarne(horas, pessoas);
 }
 
 function limparDados(){
     let pTags = document.querySelectorAll('p');
 
-    if(pTags.length = 0){
+    if(pTags.length <= 0){
         return
     }else{
-        for(i =0; i < pTags.length; i++){
+        for(i = 0; i < pTags.length; i++){
             divContent.removeChild(pTags[i]);
         }    
     }
 }
 
-function calcCarne(hr, pessoas){
+function calcCarne(hr){
     if(hr <= 6){
-        let total = 10 * 0.40;
-        let pContent = document.createTextNode(`${total}kg de carne`);
+        let total = adulto.value * 1.2;
+        let pContent = document.createTextNode(`${total} litro(s) de cerveja`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }else{
-        let total = pessoas * 0.65;
-        let pContent = document.createTextNode(`${total}kg de carne`);
+        let total =adulto.value * 2;
+        let pContent = document.createTextNode(`${total} litro(s) de cerveja`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }
-}
+};
