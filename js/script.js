@@ -13,7 +13,7 @@ btn.onclick = function() {
     let pessoas = (parseFloat(adulto.value) + parseFloat((crianca.value / 2)).toFixed(2));
     let horas = (parseFloat(duracao.value)).toFixed(2);  
     
-    limparDados();
+    // limparDados();
     calcCarne(horas, pessoas);
 }
 
@@ -29,18 +29,18 @@ function limparDados(){
     }
 }
 
-function calcCarne(hr){
+function calcCarne(hr, pessoas){
     if(hr <= 6){
-        let total = adulto.value * 1.2;
-        let pContent = document.createTextNode(`${total} litro(s) de cerveja`);
+        let total = pessoas * 0.40;
+        let pContent = document.createTextNode(`${total}kg de carne`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }else{
-        let total =adulto.value * 2;
-        let pContent = document.createTextNode(`${total} litro(s) de cerveja`);
+        let total = pessoas * 0.65;
+        let pContent = document.createTextNode(`${total}kg de carne`);
         let pElement = document.createElement('p');
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }
-};
+}
