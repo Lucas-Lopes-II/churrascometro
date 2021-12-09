@@ -65,3 +65,18 @@ function calcCerveja(hr){
     }
 }
 
+function calcRefri(hr, pessoas){
+    if(hr <= 6){
+        let total = (pessoas * 1).toFixed(2);
+        let pContent = document.createTextNode(`${total} litro(s) de refrigerante`);
+        let pElement = document.createElement('p');
+        pElement.appendChild(pContent);
+        divContent.appendChild(pElement);
+    }else{
+        let total = (pessoas * 1.5).toFixed(2);
+        let pContent = document.createTextNode(`${total} litro(s) de refrigerante`);
+        let pElement = document.createElement('p');
+        pElement.appendChild(pContent);
+        divContent.appendChild(pElement);
+    }
+}
