@@ -4,15 +4,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-}
-
-#container {
   background-image: url(../img/fund.png);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+
   width: 1000px;
   height: 550px;
   margin: auto;
@@ -20,9 +20,10 @@ body {
 }
 
 #formDiv {
-  background-color: rgba(255, 255, 255, 0.582);
+  background-color: rgba(255, 255, 255, 0.719);
   margin: auto;
   padding: 2%;
   width: 50%;
   height: 80%;
 }
+
