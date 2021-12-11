@@ -50,6 +50,7 @@ input {
   width: 80%;
   border: 3px rgb(0, 0, 0) solid;
   border-radius: 5px;
+  box-shadow: 0 0 0.3em rgb(0, 0, 0);
 }
 
 input::placeholder {
@@ -74,6 +75,16 @@ input::placeholder {
   font-size: 17px;
   color: white;
   padding: 15px;
-  border: 1px solid blue;
+  border: 1px solid rgb(244, 244, 245);
+  box-shadow: 0 0 0.5em rgb(0, 0, 0);
   border-radius: 5px;
+  transition: 0.3ms;
+}
+
+#btn:hover {
+  background-color: rgb(12, 79, 179);
+}
+
+#btn:active {
+  width: 49%;
 }
