@@ -88,3 +88,8 @@ input::placeholder {
 #btn:active {
   width: 49%;
 }
+
+p {
+  font-weight: bold;
+  font-size: 17px;
+}
