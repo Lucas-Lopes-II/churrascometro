@@ -7,7 +7,8 @@ let adulto = document.querySelector('#adulto');
 let crianca = document.querySelector('#crianca');
 let duracao = document.querySelector('#duracao');
 let btn = document.querySelector('#btn');
-let divContent = document.querySelector('#formDiv')
+let divContent = document.querySelector('#formDiv');
+let limpar = document.querySelector('#limpar');
 
 btn.onclick = function() {
     let pessoas = parseFloat(adulto.value) + parseFloat((crianca.value / 2));
@@ -34,6 +35,8 @@ function limparDados(){
 limpar.onclick = function() {
     let inputs = document.querySelectorAll('input');
     inputs.value = '';
+    
+    divContent.removeChild('p');
 }   
 
 function calcCarne(hr, pessoas){
