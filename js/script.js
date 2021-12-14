@@ -31,6 +31,11 @@ function limparDados(){
     }
 }
 
+limpar.onclick = function() {
+    let inputs = document.querySelectorAll('input');
+    inputs.value = '';
+}   
+
 function calcCarne(hr, pessoas){
     if(hr <= 6){
         let total = (pessoas * 0.40).toFixed(2);
