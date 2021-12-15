@@ -32,11 +32,26 @@ function limparDados(){
     }
 }
 
-limpar.onclick = function() {
+limpar.onclick = function(){
     let inputs = document.querySelectorAll('input');
-    inputs.value = '';
     
-    divContent.removeChild('p');
+    if(inputs.value = ''){
+        return
+    }else{
+        for(i = 0; i < inputs.length; i++){
+           inputs[i].value = '';
+        }   
+    
+        let pTags = document.querySelectorAll('p');
+
+        if(pTags.length = 0){
+            return
+        }else{
+            for(i = 0; i < pTags.length; i++){
+                divContent.removeChild(pTags[i]);
+            }    
+        }
+    }
 }   
 
 function calcCarne(hr, pessoas){
