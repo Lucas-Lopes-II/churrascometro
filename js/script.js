@@ -111,6 +111,7 @@ function calcRefri(hr, pessoas){
 function msgVazio(){
     let pContent = document.createTextNode(`Digite valores em todos os campos`);
     let pElement = document.createElement('p');
+    pElement.setAttribute('id', 'erro');
     pElement.appendChild(pContent);
     divContent.appendChild(pElement);
 }
