@@ -28,7 +28,7 @@
 ----
 <br/><br/>
 
-## 👨‍💻Technologies used
+## 👨‍💻Tecnologias usadas
 
 ✔ JavaScript
 
