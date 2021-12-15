@@ -9,15 +9,23 @@ let duracao = document.querySelector('#duracao');
 let btn = document.querySelector('#btn');
 let divContent = document.querySelector('#formDiv');
 let limpar = document.querySelector('#limpar');
+let inputs =  document.querySelectorAll('input');
 
 btn.onclick = function() {
-    let pessoas = parseFloat(adulto.value) + parseFloat((crianca.value / 2));
-    let horas = parseFloat(duracao.value);  
-
-    limparDados();
-    calcCarne(horas, pessoas);
-    calcCerveja(horas);
-    calcRefri(horas, pessoas);
+    for(let i = 0; i < inputs.length; i++) {   
+        if(inputs[i].value === ''){
+            limparDados();
+            msgVazio()
+            return
+        }else{
+            let pessoas = parseFloat(adulto.value) + parseFloat((crianca.value / 2));
+            let horas = parseFloat(duracao.value);  
+            limparDados();
+            calcCarne(horas, pessoas);
+            calcCerveja(horas);
+            calcRefri(horas, pessoas);
+        }
+    }  
 }
 
 function limparDados(){
@@ -33,8 +41,6 @@ function limparDados(){
 }
 
 limpar.onclick = function(){
-    let inputs = document.querySelectorAll('input');
-    
     if(inputs.value = ''){
         return
     }else{
@@ -100,4 +106,11 @@ function calcRefri(hr, pessoas){
         pElement.appendChild(pContent);
         divContent.appendChild(pElement);
     }
+}
+
+function msgVazio(){
+    let pContent = document.createTextNode(`Digite valores em todos os campos`);
+    let pElement = document.createElement('p');
+    pElement.appendChild(pContent);
+    divContent.appendChild(pElement);
 }
