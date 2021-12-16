@@ -3,9 +3,9 @@
 ![Churrascomêtro](img/readme/churras..gif)
 <br/><br/><br/><br/>
 
-# Cuhrrascomêtro
+# Churrascomêtro
 
->Uma simples aplicação que calcula a quantidade de carne, cerveja e refrigerante com base bna quantidade de pessoas e horas. 
+>Uma simples aplicação que calcula a quantidade de carne, cerveja e refrigerante com base na quantidade de pessoas e horas. 
 ---
 <br/><br/>
 
