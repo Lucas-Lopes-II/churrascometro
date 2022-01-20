@@ -7,26 +7,26 @@
 
 >Uma simples aplicação que calcula a quantidade de carne, cerveja e refrigerante com base na quantidade de pessoas e horas. 
 ---
-<br/><br/>
+<br/><br/><br/>
 
 # Funcionalidades
 
 ### Calcular
 ![Botão 'Calcular'](img/readme/calc.gif)
-<br/>
+<br/><br/>
 
 ### Botão que limpa as menssagens e os inputs
 ![Botão 'Limpar'](img/readme/limp..gif)
-<br/>
+<br/><br/>
 
 ### Mensagem de erro
 >Não pode ser deixado nem um input sem valor.
 
 ![Mensagem de erro](img/readme/erro.gif)
-<br/>
+<br/><br/>
 
 ----
-<br/><br/>
+<br/><br/><br/>
 
 ## 👨‍💻Tecnologias usadas
 
@@ -38,7 +38,7 @@
 
 
 ---
-<br/><br/>
+<br/><br/><br/>
 
 ## Meta
 **Made by:** Lucas Lopes
